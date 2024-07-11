@@ -4,22 +4,22 @@ plugins {
 }
 
 android {
-    namespace = "com.itos.xplan"
+    namespace = "com.itos.xcolor"
     compileSdk = 34
     applicationVariants.all {
         outputs.all {
             val ver = defaultConfig.versionName+"-${defaultConfig.versionCode}"
 
             (this as com.android.build.gradle.internal.api.BaseVariantOutputImpl).outputFileName =
-                "XPlan_$ver.apk"
+                "XColor_$ver.apk"
         }
     }
     defaultConfig {
-        applicationId = "com.itos.xplan"
+        applicationId = "com.itos.xcolor"
         minSdk = 26
         targetSdk = 34
-        versionCode = 33
-        versionName = "1.61"
+        versionCode = 1
+        versionName = "1.0"
 
 //        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -73,11 +73,11 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.navigation:navigation-compose:2.7.6")
-    implementation("androidx.compose.material:material:1.6.0")
+    implementation("androidx.compose.material:material:1.6.8")
     implementation("com.google.accompanist:accompanist-drawablepainter:0.20.0")
     implementation(files("libs/fastjson-1.2.9.jar"))
     implementation("org.lsposed.hiddenapibypass:hiddenapibypass:4.3")
-    implementation("com.google.android.material:material:1.11.0")
+    implementation("com.google.android.material:material:1.12.0")
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.27.0")
 //    testImplementation("junit:junit:4.13.2")
 //    androidTestImplementation("androidx.test.ext:junit:1.1.5")
