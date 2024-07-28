@@ -76,7 +76,7 @@ jobs:
           echo 'org.gradle.vfs.watch=true' >> gradle.properties
           sed -i 's/org.gradle.configuration-cache=true//g' gradle.properties
           echo 'buildCache { local { removeUnusedEntriesAfterDays = 1 } }' >> settings.gradle.kts
-          echo ${{ secrets.RELEASE_KEYSTORE_FILE }} | base64 -d > keystore.jks
+          echo "${{ secrets.RELEASE_KEYSTORE_FILE }}" | base64 -d > keystore.jks
           chmod +x ./gradlew
           ./gradlew assembleRelease
           ccache -s
