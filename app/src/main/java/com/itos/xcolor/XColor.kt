@@ -757,7 +757,7 @@ class XColor : AppCompatActivity() {
         Column {
             //val appList = remember { generateAppList(context) }
             // TopAppBar
-            TopAppBar(title = { Text(text = "原·初") },
+            TopAppBar(title = { Text(text = "${R.string.app_name}") },
                 actions = {
                     IconButton(onClick = {
                         val inputEditText = EditText(context)
